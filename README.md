@@ -4,7 +4,7 @@ KF_pi0.5 extends [OpenPI’s π₀.₅](https://github.com/Physical-Intelligence
 
 ## Model Framework
 
-![KF_pi0.5 architecture showing the keyframe scorer, keyframe buffer, and action expert modulator](docs/model-framework.png)
+![KF_pi0.5 architecture showing the keyframe scorer, keyframe buffer, and action expert modulator](docs/keyframe-modulator-architecture.png)
 
 **Keyframe Scorer.** The scorer uses ResNet18 to encode candidate frames and combines task and phase embeddings through FiLM and cross-attention. An MLP scores each frame, and frames above the threshold enter the keyframe buffer. This repository uses precomputed keyframe annotations for training and client-supplied history for inference.
 
